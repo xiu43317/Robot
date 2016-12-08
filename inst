@@ -1,0 +1,15 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y fswebcam python-dev python-smbus python-setuptools python-flask
+sudo easy_install poster
+# install wifi driver
+sudo mkdir 8188eu
+cd 8188eu
+sudo wget https://dl.dropboxusercontent.com/u/80256631/8188eu-v7-20160219.tar.gz
+sudo tar -zxvf 8188eu-v7-20160219.tar.gz
+sudo install -p -m 644 8188eu.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless
+sudo insmod /lib/modules/$(uname -r)/kernel/drivers/net/wireless/8188eu.ko
+sudo depmod -a
+cd ..
+# change mjpg_streamer execution
+sudo chmod +x mjpg-streamer/mjpg_streamer

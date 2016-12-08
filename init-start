@@ -1,0 +1,6 @@
+#!/bin/bash
+modprobe i2c-bcm2708 i2c-dev
+sudo mjpg-streamer/mjpg_streamer -i "mjpg-streamer/input_uvc.so -fps 15" -o "mjpg-streamer/output_http.so -w www -p 8080" &
+cd py
+./robot.py -A &
+./Servo_Example.py $1

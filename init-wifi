@@ -1,0 +1,21 @@
+#!/bin/bash
+function pause(){
+	read -n 1 -p "$*" INP
+	if [ "$INP" != "" ] ; then
+		echo -ne '\b \n'
+	fi
+}
+lsusb
+pause "Press any key to continue..."
+echo "view wifi config"
+iwconfig wlan0
+pause "Press any key to continue..."
+echo "scan wifi"
+sudo iwlist wlan0 scan
+pause "Press any key to continue..."
+echo "modify wifi config"
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+pause "Press any key to continue..."
+sudo ifdown wlan0
+sudo ifup wlan0
+ifconfig wlan0
