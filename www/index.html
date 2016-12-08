@@ -1,0 +1,71 @@
+<html><head>
+	<title>Control Panel</title>
+	<meta name=viewport content="user-scalable=0">
+	<script src=https://code.jquery.com/jquery-1.12.1.min.js></script>
+	<script src=http://HOST_IP:WEB_PORT/file/index.js></script>
+	<link rel=stylesheet href=http://HOST_IP:WEB_PORT/file/index.css>
+</head><body>
+	<input id=ip type=hidden value=http://HOST_IP:WEB_PORT>
+	<div class=b id=b1>
+		<div class=t>Live Video</div>
+		<iframe src=http://HOST_IP:CAM_PORT/camera.html scrolling=no seamless=seamless>
+			<p>Browser does not support iframe</p> 
+		</iframe>
+		<div class="ck-btn left" id=pan_l t=500><img src=http://HOST_IP:WEB_PORT/file/img/left_arrow-64.png></div>
+		<div class="ck-btn right" id=pan_r t=500><img src=http://HOST_IP:WEB_PORT/file/img/right_arrow-64.png></div>
+		<div class=div-clr></div>
+	</div>
+	<div class=b id=b2>
+		<div class=t>Movement Control</div>
+<!-- turn left -->
+		<div class="ck-btn left" id=act_rl t=500><img src=http://HOST_IP:WEB_PORT/file/img/rotate_left-96.png></div>
+<!-- turn right -->
+		<div class="ck-btn right" id=act_rr t=500><img src=http://HOST_IP:WEB_PORT/file/img/rotate_right-96.png></div>
+		<div class=div-clr></div>
+<!-- forward -->
+		<div class="ck-btn center" id=act_f t=500><img src=http://HOST_IP:WEB_PORT/file/img/up-96.png></div>
+		<div class=div-clr></div>
+<!-- left -->
+		<div class="ck-btn left" id=act_l t=500><img src=http://HOST_IP:WEB_PORT/file/img/left-96.png></div>
+<!-- right -->
+		<div class="ck-btn right" id=act_r t=500><img src=http://HOST_IP:WEB_PORT/file/img/right-96.png></div>
+		<div class=div-clr></div>
+<!-- back -->
+		<div class="ck-btn center" id=act_b t=500><img src=http://HOST_IP:WEB_PORT/file/img/down-96.png></div>
+		<div class=div-clr></div>
+	</div>
+	<div class=b id=b3>
+		<div class=t>Photo View</div>
+<!-- Motion -->
+		
+		<div class="ck-btn left" id=sw_m t=3000 title="Motion">
+			<img src=http://HOST_IP:WEB_PORT/file/img/motion_detector-96.png>
+		</div>
+		
+<!-- Cloud Download -->
+		<div class="ck-btn right" id=jp_c href=http://CLOUD_IP/index.php title="Cloud Gallery for Download">
+			<img src=http://HOST_IP:WEB_PORT/file/img/frame-96.png>
+		</div>
+<!-- Download -->
+		<div class="ck-btn center" id=jp_d href=http://HOST_IP:CAM_PORT/image.html title="View for Download">
+			<img src=http://HOST_IP:WEB_PORT/file/img/images-96.png>
+		</div>
+		<div class=div-clr></div>
+	</div>
+	<div class=b id=b4>
+		<div class=t>Distance Detect</div>
+		<div class="btn left" id=dist_l title="Left Distance">
+			<span class=l><img src=http://HOST_IP:WEB_PORT/file/img/loading.gif> Loading...</span>
+			<span class="v h">data</span><span class=h> cm</span>
+		</div>
+		<div class="btn right" id=dist_r title="Right Distance">
+			<span class=l><img src=http://HOST_IP:WEB_PORT/file/img/loading.gif> Loading...</span>
+			<span class="v h">data</span><span class=h> cm</span>
+		</div>
+<!-- Automatic Walking -->
+		<div class="ck-btn center" id=sw_a t=500 title="Auto Movement by Distance Detect">
+			<img src=http://HOST_IP:WEB_PORT/file/img/auto_way-96.png>
+		</div>
+		<div class=div-clr></div>
+	</div>
+</body></html>
