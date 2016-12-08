@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>MJPG-Streamer - Static Example</title>
+    <script>
+    function newDoc()
+    {
+     window.location.assign("http://192.168.0.19:5000/control")
+    }
+    </script>
+    <script src="http://192.168.0.19:5000/file/jquery.min.js"></script>
+	<script>
+	$().ready(function(){
+   $("#upload").click(function(){ $.get("http://192.168.0.19:5000/upload"); });
+    });
+	</script>
+
+  </head>
+  <body>
+    <center>
+      <img src="/?action=snapshot" alt="This is a static snapshot" />
+      <button type="button" id="return" onclick="newDoc()">Return</button>
+      <button type="button" id="upload">Upload</button>
+    </center>
+  </body>
+</html>

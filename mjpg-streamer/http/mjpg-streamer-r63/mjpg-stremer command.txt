@@ -1,0 +1,1 @@
+sudo ./mjpg_streamer  -i "./input_uvc.so -fps 15" -o "./output_http.so -w ../html -p 8080" &
