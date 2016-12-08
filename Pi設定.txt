@@ -1,0 +1,5 @@
+sudo apt-get install fswebcam 相機拍照
+
+http://m.oschina.net/blog/127909 (Python中利用urllib2使用POST方式上傳文件)
+
+https://gocreating.gitbooks.io/rpinote/content/using_wi-fi.html (TP-Link TL-WN725N 2.0驅動安裝)
